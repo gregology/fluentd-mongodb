@@ -71,3 +71,12 @@ Create `fluentd/etc/fluent.conf` using the tail source type, json parse type, an
   </buffer>
 </match>
 ```
+
+## Build
+
+```
+docker build -t gregology/fluentd-mongodb:v1.15 .
+docker push gregology/fluentd-mongodb:v1.15
+docker tag gregology/fluentd-mongodb:v1.15 gregology/fluentd-mongodb:latest
+docker push gregology/pavlov-server:latest
+```
